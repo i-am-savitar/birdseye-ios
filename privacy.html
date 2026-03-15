@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy — birdseye</title>
+    <style>
+        :root {
+            --navy: #0D1123;
+            --bg: #FAFAFA;
+            --text: #333;
+            --text-secondary: #666;
+            --border: #E5E5E5;
+            --max-width: 640px;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #111;
+                --text: #E0E0E0;
+                --text-secondary: #999;
+                --border: #2A2A2A;
+                --navy: #8B9FD4;
+            }
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 48px 24px 64px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .bird-mark {
+            width: 52px;
+            height: 28px;
+            margin: 0 auto 12px;
+        }
+
+        .bird-mark svg { width: 100%; height: 100%; }
+
+        .header h1 {
+            font-size: 22px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            color: var(--navy);
+            margin-bottom: 4px;
+        }
+
+        .header .updated {
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+
+        .intro {
+            font-size: 15px;
+            color: var(--text-secondary);
+            margin-bottom: 32px;
+        }
+
+        section {
+            margin-bottom: 28px;
+        }
+
+        h2 {
+            font-size: 17px;
+            font-weight: 600;
+            color: var(--navy);
+            margin-bottom: 8px;
+        }
+
+        p {
+            font-size: 15px;
+            color: var(--text-secondary);
+            margin-bottom: 10px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 10px;
+        }
+
+        ul li {
+            font-size: 15px;
+            color: var(--text-secondary);
+            padding-left: 16px;
+            position: relative;
+            margin-bottom: 4px;
+        }
+
+        ul li::before {
+            content: "\2022";
+            position: absolute;
+            left: 0;
+        }
+
+        a {
+            color: #007AFF;
+            text-decoration: none;
+        }
+
+        a:hover { text-decoration: underline; }
+
+        hr {
+            border: none;
+            border-top: 1px solid var(--border);
+            margin: 28px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="bird-mark">
+                <svg viewBox="0 0 44 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M22,0 C14,0 0,10 0,24 C8,16 15,13 22,20 C29,13 36,16 44,24 C44,10 30,0 22,0 Z" fill="currentColor" style="color: var(--navy);"/>
+                </svg>
+            </div>
+            <h1>Privacy Policy</h1>
+            <p class="updated">Last Updated: March 15, 2026</p>
+        </div>
+
+        <p class="intro">birdseye ("the App") is developed by Banshee ("we," "us," or "our"). We built birdseye with privacy as a core principle. This Privacy Policy explains how the App handles your data.</p>
+
+        <hr>
+
+        <section>
+            <h2>Summary</h2>
+            <p>birdseye stores all your data locally on your device. We do not collect, transmit, or store any personal information on external servers. We have no analytics, no tracking, and no third-party SDKs.</p>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>Data Storage</h2>
+            <p>All data you create in birdseye — including trips, expenses, group members, receipt images, diary entries, and preferences — is stored locally on your device using Apple's SwiftData framework. This data is protected by your device's passcode and encryption.</p>
+            <p>We do not operate any servers or cloud infrastructure. Your data is never uploaded, synced, or backed up to any service operated by us.</p>
+            <p>If you use iCloud Backup on your device, your birdseye data may be included in your device backup according to Apple's iCloud terms and privacy policy. This is managed by Apple, not by us.</p>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>Data We Do Not Collect</h2>
+            <p>We do not collect, store, or process:</p>
+            <ul>
+                <li>Personal identification information (name, email, phone number, address)</li>
+                <li>Location data or GPS coordinates</li>
+                <li>Device identifiers or fingerprints</li>
+                <li>Usage analytics or behavioral data</li>
+                <li>Crash reports or diagnostics (beyond what Apple collects via its own systems)</li>
+                <li>Advertising identifiers</li>
+                <li>Health or biometric data</li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>Currency Exchange Rates</h2>
+            <p>birdseye fetches currency exchange rates from the <a href="https://frankfurter.dev">Frankfurter API</a>, a free, open-source service operated by an independent third party.</p>
+            <p>When the App requests exchange rates:</p>
+            <ul>
+                <li><strong>What is sent:</strong> A standard HTTPS request containing the currencies to convert (e.g., "USD to EUR"). No personal data, device identifiers, or user information is included.</li>
+                <li><strong>When it occurs:</strong> Rates are fetched when you first open the App or when cached rates are older than 24 hours.</li>
+                <li><strong>Offline fallback:</strong> If no network connection is available, the App uses approximate built-in rates so all features remain functional.</li>
+            </ul>
+            <p>We have no relationship with the Frankfurter API beyond using their public endpoint. Please refer to their privacy policy for details on how they handle API requests.</p>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>Receipt Scanning</h2>
+            <p>birdseye includes a receipt scanning feature that uses your device's camera to photograph receipts and extract text from them.</p>
+            <ul>
+                <li><strong>Camera access:</strong> The App requests camera permission only when you choose to scan a receipt. Photos are processed and stored entirely on your device.</li>
+                <li><strong>OCR processing:</strong> Text extraction uses Apple's Vision framework, which runs entirely on-device. No receipt images or extracted text are sent to external servers.</li>
+                <li><strong>AI parsing (Pro):</strong> On supported devices, birdseye Pro uses Apple Intelligence to parse receipt text into structured items. This processing runs on-device. No data is sent to Apple or any third party for this feature.</li>
+            </ul>
+            <p>Receipt images are stored in the App's local documents directory and are not accessible to other apps.</p>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>In-App Purchases</h2>
+            <p>birdseye offers optional in-app purchases (birdseye Pro) through Apple's App Store using StoreKit 2.</p>
+            <ul>
+                <li>Purchase transactions are processed entirely by Apple.</li>
+                <li>We do not collect or store your payment information, Apple ID, or purchase history on any server.</li>
+                <li>Purchase verification happens on-device using Apple's StoreKit 2 framework.</li>
+                <li>For details on how Apple handles purchase data, refer to <a href="https://www.apple.com/privacy/">Apple's Privacy Policy</a>.</li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>Group Members and Contact Information</h2>
+            <p>When you add travel companions in birdseye, you may optionally enter their name, email address, or phone number. This information is:</p>
+            <ul>
+                <li>Stored locally on your device only</li>
+                <li>Never transmitted to any server or third party</li>
+                <li>Used solely within the App to display group member information and facilitate expense splitting</li>
+                <li>Deleted when you remove the group member from the App</li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>Children's Privacy</h2>
+            <p>birdseye is not directed at children under the age of 13. We do not knowingly collect personal information from children. Since all data remains on-device and we collect no data whatsoever, there is no mechanism through which children's data could be collected.</p>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>Third-Party Services</h2>
+            <p>birdseye does not integrate any third-party SDKs, analytics services, advertising networks, or tracking tools. The only external service communication is the currency rate API described above.</p>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>Data Deletion</h2>
+            <p>Since all data is stored locally on your device, you have full control over your data at all times:</p>
+            <ul>
+                <li><strong>Delete individual items:</strong> Remove any trip, expense, group member, or diary entry from within the App.</li>
+                <li><strong>Delete all data:</strong> Uninstalling the App removes all birdseye data from your device.</li>
+                <li><strong>iCloud Backup:</strong> If your device backs up to iCloud, birdseye data in those backups is subject to Apple's data retention policies.</li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>Data Security</h2>
+            <p>Your data is protected by:</p>
+            <ul>
+                <li><strong>Device encryption:</strong> All data on your iOS device is encrypted when the device is locked.</li>
+                <li><strong>App sandboxing:</strong> iOS prevents other apps from accessing birdseye's data.</li>
+                <li><strong>SwiftData protection:</strong> The App's database inherits your device's default file protection level.</li>
+                <li><strong>No network exposure:</strong> Since data is never transmitted, there is no risk of interception or server breach.</li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>Changes to This Policy</h2>
+            <p>We may update this Privacy Policy from time to time. Any changes will be reflected in the "Last Updated" date at the top of this document. Since we have no way to contact you (we don't collect your information), we encourage you to review this policy periodically.</p>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>Contact Us</h2>
+            <p>If you have questions or concerns about this Privacy Policy, please contact us at:</p>
+            <p><a href="mailto:jerome.gilden@gmail.com">jerome.gilden@gmail.com</a></p>
+        </section>
+    </div>
+</body>
+</html>

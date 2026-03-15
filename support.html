@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support — birdseye</title>
+    <style>
+        :root {
+            --navy: #0D1123;
+            --bg: #FAFAFA;
+            --text: #333;
+            --text-secondary: #666;
+            --border: #E5E5E5;
+            --card-bg: #F0F0F0;
+            --max-width: 640px;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #111;
+                --text: #E0E0E0;
+                --text-secondary: #999;
+                --border: #2A2A2A;
+                --card-bg: #1A1A1A;
+                --navy: #8B9FD4;
+            }
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 48px 24px 64px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .bird-mark {
+            width: 52px;
+            height: 28px;
+            margin: 0 auto 12px;
+        }
+
+        .bird-mark svg { width: 100%; height: 100%; }
+
+        .header h1 {
+            font-size: 22px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            color: var(--navy);
+        }
+
+        h2 {
+            font-size: 17px;
+            font-weight: 600;
+            color: var(--navy);
+            margin-bottom: 12px;
+        }
+
+        p {
+            font-size: 15px;
+            color: var(--text-secondary);
+            margin-bottom: 10px;
+        }
+
+        a {
+            color: #007AFF;
+            text-decoration: none;
+        }
+
+        a:hover { text-decoration: underline; }
+
+        .section {
+            margin-bottom: 32px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 16px 20px;
+            margin-bottom: 8px;
+        }
+
+        .contact-card {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+
+        .contact-card:hover { text-decoration: none; opacity: 0.8; }
+
+        .contact-icon {
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+
+        .contact-card span {
+            font-size: 15px;
+            color: #007AFF;
+        }
+
+        details {
+            background: var(--card-bg);
+            border-radius: 12px;
+            margin-bottom: 8px;
+        }
+
+        summary {
+            padding: 16px 20px;
+            font-size: 15px;
+            font-weight: 500;
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        summary::-webkit-details-marker { display: none; }
+
+        summary::after {
+            content: "+";
+            font-size: 18px;
+            font-weight: 300;
+            color: var(--text-secondary);
+            transition: transform 0.2s;
+        }
+
+        details[open] summary::after {
+            content: "\2212";
+        }
+
+        details .answer {
+            padding: 0 20px 16px;
+            font-size: 15px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+
+        .info-table {
+            background: var(--card-bg);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .info-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 14px 20px;
+        }
+
+        .info-row + .info-row {
+            border-top: 1px solid var(--border);
+        }
+
+        .info-label {
+            font-size: 15px;
+            color: var(--text);
+        }
+
+        .info-value {
+            font-size: 15px;
+            color: var(--text-secondary);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="bird-mark">
+                <svg viewBox="0 0 44 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M22,0 C14,0 0,10 0,24 C8,16 15,13 22,20 C29,13 36,16 44,24 C44,10 30,0 22,0 Z" fill="currentColor" style="color: var(--navy);"/>
+                </svg>
+            </div>
+            <h1>Support</h1>
+        </div>
+
+        <div class="section">
+            <h2>Contact</h2>
+            <div class="card">
+                <a href="mailto:jerome.gilden@gmail.com" class="contact-card">
+                    <span class="contact-icon">&#9993;</span>
+                    <span>jerome.gilden@gmail.com</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Frequently Asked Questions</h2>
+
+            <details>
+                <summary>Where is my data stored?</summary>
+                <div class="answer">All your data is stored locally on your device using Apple's SwiftData framework. Nothing is uploaded to external servers. Your data is protected by your device's passcode and encryption.</div>
+            </details>
+
+            <details>
+                <summary>How do I export my trip data?</summary>
+                <div class="answer">Exporting is a Pro feature. Open a trip, then tap the share button to export a summary of your trip expenses.</div>
+            </details>
+
+            <details>
+                <summary>How do I restore my Pro purchase?</summary>
+                <div class="answer">Go to Settings and tap "Restore Purchases" in the Birdseye Pro section. Your purchase will be verified with the App Store and restored automatically.</div>
+            </details>
+
+            <details>
+                <summary>How do currency conversions work?</summary>
+                <div class="answer">birdseye fetches exchange rates from the Frankfurter API and caches them for offline use. Rates refresh automatically when they're older than 24 hours. If you're offline, the app uses the most recently cached rates.</div>
+            </details>
+        </div>
+
+        <div class="section">
+            <h2>App Info</h2>
+            <div class="info-table">
+                <div class="info-row">
+                    <span class="info-label">Developer</span>
+                    <span class="info-value">Banshee</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Platform</span>
+                    <span class="info-value">iOS 26.2+</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Privacy</span>
+                    <span class="info-value"><a href="privacy.html">Privacy Policy</a></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
