@@ -132,7 +132,7 @@
                 </svg>
             </div>
             <h1>Privacy Policy</h1>
-            <p class="updated">Last Updated: March 15, 2026</p>
+            <p class="updated">Last Updated: March 27, 2026</p>
         </div>
 
         <p class="intro">birdseye ("the App") is developed by Banshee ("we," "us," or "our"). We built birdseye with privacy as a core principle. This Privacy Policy explains how the App handles your data.</p>
@@ -148,9 +148,9 @@
 
         <section>
             <h2>Data Storage</h2>
-            <p>All data you create in birdseye — including trips, expenses, group members, receipt images, diary entries, and preferences — is stored locally on your device using Apple's SwiftData framework. This data is protected by your device's passcode and encryption.</p>
+            <p>All data you create in birdseye — including trips, expenses, group members, receipt images, diary entries, and preferences — is stored locally on your device. On iOS, this uses Apple's SwiftData framework. On Android, this uses Room database. This data is protected by your device's passcode and encryption.</p>
             <p>We do not operate any servers or cloud infrastructure. Your data is never uploaded, synced, or backed up to any service operated by us.</p>
-            <p>If you use iCloud Backup on your device, your birdseye data may be included in your device backup according to Apple's iCloud terms and privacy policy. This is managed by Apple, not by us.</p>
+            <p>If you use iCloud Backup (iOS) or Google Backup (Android) on your device, your birdseye data may be included in your device backup according to the respective platform's terms and privacy policy. This is managed by Apple or Google, not by us.</p>
         </section>
 
         <hr>
@@ -163,7 +163,7 @@
                 <li>Location data or GPS coordinates</li>
                 <li>Device identifiers or fingerprints</li>
                 <li>Usage analytics or behavioral data</li>
-                <li>Crash reports or diagnostics (beyond what Apple collects via its own systems)</li>
+                <li>Crash reports or diagnostics (beyond what Apple or Google collects via their own systems)</li>
                 <li>Advertising identifiers</li>
                 <li>Health or biometric data</li>
             </ul>
@@ -190,8 +190,8 @@
             <p>birdseye includes a receipt scanning feature that uses your device's camera to photograph receipts and extract text from them.</p>
             <ul>
                 <li><strong>Camera access:</strong> The App requests camera permission only when you choose to scan a receipt. Photos are processed and stored entirely on your device.</li>
-                <li><strong>OCR processing:</strong> Text extraction uses Apple's Vision framework, which runs entirely on-device. No receipt images or extracted text are sent to external servers.</li>
-                <li><strong>AI parsing (Pro):</strong> On supported devices, birdseye Pro uses Apple Intelligence to parse receipt text into structured items. This processing runs on-device. No data is sent to Apple or any third party for this feature.</li>
+                <li><strong>OCR processing:</strong> Text extraction uses Apple's Vision framework (iOS) or Google's ML Kit Text Recognition (Android), both of which run entirely on-device. No receipt images or extracted text are sent to external servers.</li>
+                <li><strong>AI parsing (iOS Pro):</strong> On supported iOS devices, birdseye Pro uses Apple Intelligence to parse receipt text into structured items. This processing runs on-device. No data is sent to Apple or any third party for this feature.</li>
             </ul>
             <p>Receipt images are stored in the App's local documents directory and are not accessible to other apps.</p>
         </section>
@@ -200,12 +200,12 @@
 
         <section>
             <h2>In-App Purchases</h2>
-            <p>birdseye offers optional in-app purchases (birdseye Pro) through Apple's App Store using StoreKit 2.</p>
+            <p>birdseye offers optional in-app purchases (birdseye Pro) through Apple's App Store (iOS) or Google Play Store (Android).</p>
             <ul>
-                <li>Purchase transactions are processed entirely by Apple.</li>
-                <li>We do not collect or store your payment information, Apple ID, or purchase history on any server.</li>
-                <li>Purchase verification happens on-device using Apple's StoreKit 2 framework.</li>
-                <li>For details on how Apple handles purchase data, refer to <a href="https://www.apple.com/privacy/">Apple's Privacy Policy</a>.</li>
+                <li>Purchase transactions are processed entirely by Apple or Google, depending on your platform.</li>
+                <li>We do not collect or store your payment information, account details, or purchase history on any server.</li>
+                <li>Purchase verification happens on-device using Apple's StoreKit 2 (iOS) or Google Play Billing Library (Android).</li>
+                <li>For details on how your platform handles purchase data, refer to <a href="https://www.apple.com/privacy/">Apple's Privacy Policy</a> or <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>.</li>
             </ul>
         </section>
 
@@ -244,7 +244,7 @@
             <ul>
                 <li><strong>Delete individual items:</strong> Remove any trip, expense, group member, or diary entry from within the App.</li>
                 <li><strong>Delete all data:</strong> Uninstalling the App removes all birdseye data from your device.</li>
-                <li><strong>iCloud Backup:</strong> If your device backs up to iCloud, birdseye data in those backups is subject to Apple's data retention policies.</li>
+                <li><strong>Cloud Backup:</strong> If your device backs up to iCloud (iOS) or Google Drive (Android), birdseye data in those backups is subject to the respective platform's data retention policies.</li>
             </ul>
         </section>
 
@@ -254,9 +254,9 @@
             <h2>Data Security</h2>
             <p>Your data is protected by:</p>
             <ul>
-                <li><strong>Device encryption:</strong> All data on your iOS device is encrypted when the device is locked.</li>
-                <li><strong>App sandboxing:</strong> iOS prevents other apps from accessing birdseye's data.</li>
-                <li><strong>SwiftData protection:</strong> The App's database inherits your device's default file protection level.</li>
+                <li><strong>Device encryption:</strong> All data on your device is encrypted when the device is locked.</li>
+                <li><strong>App sandboxing:</strong> Both iOS and Android prevent other apps from accessing birdseye's data.</li>
+                <li><strong>Database protection:</strong> The App's database (SwiftData on iOS, Room on Android) inherits your device's default file protection level.</li>
                 <li><strong>No network exposure:</strong> Since data is never transmitted, there is no risk of interception or server breach.</li>
             </ul>
         </section>
